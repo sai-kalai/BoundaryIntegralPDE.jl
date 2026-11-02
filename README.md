@@ -12,7 +12,7 @@
 > Boundary Integral Methods with Automatic Differentiation in Julia.
 
 > [!NOTE]  
-> This package is currently under development. The goal is to contribute to Julia's SciML ecosystem.
+> This is a research project currently under development. The goal is to eventually be able to contribute a solver to Julia's SciML ecosystem.
 
 `BoundaryIntegralEquations.jl` is a Julia package for solving boundary integral equations with an emphasis on differentiable scientific computing. It provides high-order boundary integral operators, numerical quadrature, finite-difference utilities, and support for automatic differentiation, making it suitable for PDE-constrained optimization, inverse problems, and shape optimization.
 
