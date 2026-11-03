@@ -7,8 +7,8 @@ using BenchmarkTools
 using ProfileView
 using GLMakie
 
-using BoundaryIntegralEquations
-using BoundaryIntegralEquations.DevTools
+using BoundaryIntegralPDE
+using BoundaryIntegralPDE.DevTools
 
 n_domain = 200
 n_bdry = 400

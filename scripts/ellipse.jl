@@ -8,7 +8,7 @@ using PolygonOps
 
 GLMakie.activate!()
 
-using BoundaryIntegralEquations
+using BoundaryIntegralPDE
 
 
 function main()

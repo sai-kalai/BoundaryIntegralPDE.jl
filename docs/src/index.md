@@ -1,14 +1,14 @@
 ```@meta
-CurrentModule = BoundaryIntegralEquations
+CurrentModule = BoundaryIntegralPDE
 ```
 
-# BoundaryIntegralEquations
+# BoundaryIntegralPDE
 
-Documentation for [BoundaryIntegralEquations](https://github.com/sai-kalai/BoundaryIntegralEquations.jl).
+Documentation for [BoundaryIntegralPDE](https://github.com/sai-kalai/BoundaryIntegralPDE.jl).
 
 ```@index
 ```
 
 ```@autodocs
-Modules = [BoundaryIntegralEquations]
+Modules = [BoundaryIntegralPDE]
 ```

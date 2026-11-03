@@ -25,7 +25,7 @@ using GLMakie
 using JLD2
 using Statistics
 
-using BoundaryIntegralEquations, BoundaryIntegralEquations.DevTools
+using BoundaryIntegralPDE, BoundaryIntegralPDE.DevTools
 
 include("utils.jl")
 

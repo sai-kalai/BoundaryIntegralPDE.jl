@@ -16,8 +16,8 @@ using StaticArrays
 using Printf
 using JLD2
 
-using BoundaryIntegralEquations
-using BoundaryIntegralEquations.DevTools
+using BoundaryIntegralPDE
+using BoundaryIntegralPDE.DevTools
 
 include("utils.jl")
 

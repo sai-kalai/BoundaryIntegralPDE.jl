@@ -17,8 +17,8 @@ using JLD2
 using NearestNeighbors
 using Printf
 
-using BoundaryIntegralEquations
-using BoundaryIntegralEquations.DevTools
+using BoundaryIntegralPDE
+using BoundaryIntegralPDE.DevTools
 
 
 include("utils.jl")

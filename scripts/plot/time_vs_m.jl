@@ -21,7 +21,7 @@ using JLD2
 using Statistics
 using Glob
 
-using BoundaryIntegralEquations, BoundaryIntegralEquations.DevTools
+using BoundaryIntegralPDE, BoundaryIntegralPDE.DevTools
 
 @info docstring
 

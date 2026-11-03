@@ -5,8 +5,8 @@ using DataFrames
 using Printf
 
 
-using BoundaryIntegralEquations
-using BoundaryIntegralEquations.DevTools
+using BoundaryIntegralPDE
+using BoundaryIntegralPDE.DevTools
 
 include("plot/utils.jl")
 
@@ -38,7 +38,7 @@ function make_operators(n_vals=100:20:800)
         append!(ops, ops2)
     end
 
-    BoundaryIntegralEquations.panic_if_garbage(ops...)
+    BoundaryIntegralPDE.panic_if_garbage(ops...)
 
     return ops
 end
@@ -51,7 +51,7 @@ function make_row(o)
         letter = (o|>typeof|>nameof|>string)[1]
     end
 
-    m = BoundaryIntegralEquations.matrix(o)
+    m = BoundaryIntegralPDE.matrix(o)
     if (o isa DoubleLayer || o isa AdjointDoubleLayer)
         m = 0.5I - m
         opname = L"\pm \left(\frac{1}{2}-\mathcal{%$letter}\right)"

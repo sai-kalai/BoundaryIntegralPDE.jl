@@ -1,15 +1,15 @@
 using Revise
-using BoundaryIntegralEquations
+using BoundaryIntegralPDE
 using Documenter
 
-DocMeta.setdocmeta!(BoundaryIntegralEquations, :DocTestSetup, :(using BoundaryIntegralEquations); recursive=true)
+DocMeta.setdocmeta!(BoundaryIntegralPDE, :DocTestSetup, :(using BoundaryIntegralPDE); recursive=true)
 
 makedocs(;
-    modules=[BoundaryIntegralEquations],
+    modules=[BoundaryIntegralPDE],
     authors="Simón Cadavid",
-    sitename="BoundaryIntegralEquations.jl",
+    sitename="BoundaryIntegralPDE.jl",
     format=Documenter.HTML(;
-        canonical="https://sai-kalai.github.io/BoundaryIntegralEquations.jl",
+        canonical="https://sai-kalai.github.io/BoundaryIntegralPDE.jl",
         edit_link="main",
         assets=String[],
     ),
@@ -19,6 +19,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/sai-kalai/BoundaryIntegralEquations.jl",
+    repo="github.com/sai-kalai/BoundaryIntegralPDE.jl",
     devbranch="main",
 )

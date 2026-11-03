@@ -1,4 +1,4 @@
-using BoundaryIntegralEquations
+using BoundaryIntegralPDE
 using Test
 
 

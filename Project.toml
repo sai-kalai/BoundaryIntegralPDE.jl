@@ -1,4 +1,4 @@
-name = "BoundaryIntegralEquations"
+name = "BoundaryIntegralPDE"
 uuid = "58b2a5b9-46a1-47d2-a141-e25d04a557d9"
 version = "0.1.0"
 authors = ["simon cadavid <simon.cadavid98@gmail.com>"]
@@ -21,7 +21,7 @@ StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
 Makie = "ee78f7c6-11fb-53f2-987a-cfe4a2b5a57a"
 
 [extensions]
-BoundaryIntegralEquationsMakieExt = "Makie"
+BoundaryIntegralPDEMakieExt = "Makie"
 
 [extras]
 SafeTestsets = "1bc83da4-3b8d-516f-aca4-4fe02f6d838f"

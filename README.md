@@ -1,17 +1,21 @@
-# BoundaryIntegralEquations
+# BoundaryIntegralPDE
 
-[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://sai-kalai.github.io/BoundaryIntegralEquations.jl/stable/)
-[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://sai-kalai.github.io/BoundaryIntegralEquations.jl/dev/)
+[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://sai-kalai.github.io/BoundaryIntegralPDE.jl/stable/)
+[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://sai-kalai.github.io/BoundaryIntegralPDE.jl/dev/)
 
-[![Build Status](https://github.com/sai-kalai/BoundaryIntegralEquations.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/sai-kalai/BoundaryIntegralEquations.jl/actions/workflows/CI.yml?query=branch%3Amain)
-[![Coverage](https://codecov.io/gh/sai-kalai/BoundaryIntegralEquations.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/sai-kalai/BoundaryIntegralEquations.jl)
+[![Build Status](https://github.com/sai-kalai/BoundaryIntegralPDE.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/sai-kalai/BoundaryIntegralPDE.jl/actions/workflows/CI.yml?query=branch%3Amain)
+[![Coverage](https://codecov.io/gh/sai-kalai/BoundaryIntegralPDE.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/sai-kalai/BoundaryIntegralPDE.jl)
 
 [![ColPrac: Contributor's Guide on Collaborative Practices](https://img.shields.io/badge/ColPrac-Contributor's%20Guide-blueviolet)](https://github.com/SciML/ColPrac)
 [![Code Style: Blue](https://img.shields.io/badge/code%20style-blue-4485ed.svg)](https://github.com/invenia/BlueStyle)
 
 > Boundary Integral Methods with Automatic Differentiation in Julia.
 
-`BoundaryIntegralEquations.jl` is a Julia package for solving boundary integral equations with an emphasis on differentiable scientific computing. It provides high-order boundary integral operators, numerical quadrature, finite-difference utilities, and support for automatic differentiation, making it suitable for PDE-constrained optimization, inverse problems, and shape optimization.
+`BoundaryIntegralPDE.jl` is a Julia package for solving boundary value problems
+with an emphasis on differentiable scientific computing. It provides high-order
+boundary integral operators, numerical quadrature, finite-difference utilities,
+and support for automatic differentiation, making it suitable for
+PDE-constrained optimization, inverse problems, and shape optimization.
 
 The package is designed around modular operators and kernels, allowing researchers to prototype and experiment with boundary integral methods while leveraging Julia's performance and composability.
 
@@ -50,7 +54,7 @@ Pkg.instantiate()
 
 ```
 src/
-├── BoundaryIntegralEquations.jl                 # Package entry point
+├── BoundaryIntegralPDE.jl                 # Package entry point
 ├── kernels.jl                 # Boundary integral kernels
 ├── operators.jl               # Integral operators
 ├── densities.jl               # Density representations
@@ -62,7 +66,7 @@ src/
 └── utils.jl                   # Shared utilities
 
 ext/
-└── BoundaryIntegralEquationsEnzymeExt.jl        # Enzyme automatic differentiation extension
+└── BoundaryIntegralPDEEnzymeExt.jl        # Enzyme automatic differentiation extension
 
 scripts/
 ├── main.jl
@@ -118,7 +122,7 @@ The package currently includes implementations related to
 
 ## Development Status
 
-`BoundaryIntegralEquations.jl` is an active research project under development. APIs may change as new algorithms and numerical methods are incorporated.
+`BoundaryIntegralPDE.jl` is an active research project under development. APIs may change as new algorithms and numerical methods are incorporated.
 
 ## Contributing
 

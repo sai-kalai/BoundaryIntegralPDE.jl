@@ -1,4 +1,4 @@
-module BoundaryIntegralEquations
+module BoundaryIntegralPDE
 
 
 #
@@ -203,4 +203,4 @@ include("DevTools/DevTools.jl")
     include("../test/close_evaluation.jl")
 end
 
-end # module BoundaryIntegralEquations
+end # module BoundaryIntegralPDE

@@ -3,9 +3,9 @@
 using Makie
 using LinearAlgebra
 
-using BoundaryIntegralEquations
-using BoundaryIntegralEquations.DevTools
-using BoundaryIntegralEquations: order
+using BoundaryIntegralPDE
+using BoundaryIntegralPDE.DevTools
+using BoundaryIntegralPDE: order
 
 
 using GLMakie

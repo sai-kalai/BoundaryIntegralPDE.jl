@@ -1,8 +1,8 @@
 
 using Test
 
-using BoundaryIntegralEquations
-using BoundaryIntegralEquations.DevTools
+using BoundaryIntegralPDE
+using BoundaryIntegralPDE.DevTools
 
 @testset "solve" begin
     n = 200

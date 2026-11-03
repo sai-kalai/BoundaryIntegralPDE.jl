@@ -1,5 +1,5 @@
-using BoundaryIntegralEquations
-using BoundaryIntegralEquations.DevTools.Fixtures: test_locations, reference_operator_matrix
+using BoundaryIntegralPDE
+using BoundaryIntegralPDE.DevTools.Fixtures: test_locations, reference_operator_matrix
 using Test
 
 

@@ -3,7 +3,7 @@
 # specialize the concept of manifold. e.g. geometric manifold has tangents, etc.
 # curve, closed curve, 2d, 3d, surface, closed surface, ...
 
-using BoundaryIntegralEquations: make_svector2
+using BoundaryIntegralPDE: make_svector2
 
 function Base.size(m::AbstractManifold, dims...)
     return size(m.x, dims...)

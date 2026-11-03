@@ -6,8 +6,8 @@ using JLD2
 using StaticArrays
 using BenchmarkTools
 
-using BoundaryIntegralEquations
-using BoundaryIntegralEquations.DevTools
+using BoundaryIntegralPDE
+using BoundaryIntegralPDE.DevTools
 
 # define dense cartesian background grid
 @show ARGS

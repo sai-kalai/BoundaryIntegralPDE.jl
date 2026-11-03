@@ -1,14 +1,14 @@
 
-module BoundaryIntegralEquationsMakieExt
+module BoundaryIntegralPDEMakieExt
 
 using DelaunayTriangulation
 using Makie
 
-using BoundaryIntegralEquations
-import BoundaryIntegralEquations: boundarycurve, boundarycurve!
+using BoundaryIntegralPDE
+import BoundaryIntegralPDE: boundarycurve, boundarycurve!
 
 # non inplace version to allocate fig and ax
-function BoundaryIntegralEquations.visualize(
+function BoundaryIntegralPDE.visualize(
     args...;
     kwargs...,
 )
@@ -17,7 +17,7 @@ function BoundaryIntegralEquations.visualize(
     return fig, ax, visualize!(ax, args..., kwargs...)
 end
 
-function BoundaryIntegralEquations.visualize!(
+function BoundaryIntegralPDE.visualize!(
     ax::Axis,
     b,
     # TODO: these should be kwargs

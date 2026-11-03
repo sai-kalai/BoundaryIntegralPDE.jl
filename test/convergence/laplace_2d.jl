@@ -21,9 +21,9 @@ using LinearAlgebra
 using BenchmarkTools
 using JLD2
 
-using BoundaryIntegralEquations
-using BoundaryIntegralEquations.DevTools
-using BoundaryIntegralEquations.DevTools: Fixtures
+using BoundaryIntegralPDE
+using BoundaryIntegralPDE.DevTools
+using BoundaryIntegralPDE.DevTools: Fixtures
 
 # 1. run simulations
 #

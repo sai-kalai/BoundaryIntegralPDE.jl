@@ -11,8 +11,8 @@ Plot the setup used for convergence analysis of value problems
 """
 
 
-using BoundaryIntegralEquations
-using BoundaryIntegralEquations.DevTools
+using BoundaryIntegralPDE
+using BoundaryIntegralPDE.DevTools
 using GLMakie
 using CairoMakie
 

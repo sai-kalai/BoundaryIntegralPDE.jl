@@ -14,7 +14,7 @@ only Direct approach, Dirichlet BC
 using JLD2
 using GLMakie
 
-using BoundaryIntegralEquations, BoundaryIntegralEquations.DevTools
+using BoundaryIntegralPDE, BoundaryIntegralPDE.DevTools
 
 include("utils.jl")
 
