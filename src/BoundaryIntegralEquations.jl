@@ -170,9 +170,13 @@ export starfish, ball
 
 export numpoints, bvp
 export visualize, visualize!
+export boundarycurve!, boundarycurve
 
 function visualize end
 function visualize! end
+function boundarycurve end
+function boundarycurve! end
+
 
 # development tools module
 include("DevTools/DevTools.jl")

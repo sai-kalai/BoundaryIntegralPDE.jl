@@ -1,10 +1,11 @@
 
 module BoundaryIntegralEquationsMakieExt
 
-using BoundaryIntegralEquations
 using DelaunayTriangulation
 using Makie
 
+using BoundaryIntegralEquations
+import BoundaryIntegralEquations: boundarycurve, boundarycurve!
 
 # non inplace version to allocate fig and ax
 function BoundaryIntegralEquations.visualize(
@@ -18,7 +19,7 @@ end
 
 function BoundaryIntegralEquations.visualize!(
     ax::Axis,
-    b::DiscreteClosedCurve,
+    b,
     # TODO: these should be kwargs
     arrows::Bool=false,
     parameter::Bool=false,
@@ -33,7 +34,7 @@ function BoundaryIntegralEquations.visualize!(
         ;
         label="Γ",
         colormap=Makie.to_colormap(:viridis),
-        colorrange=(1, size(b, 2)+1),
+        colorrange=(1, size(b, 2) + 1),
         color=parameter ? (1:(size(b, 2)+1)) : :black,
         line_kwargs...,
     )
@@ -66,9 +67,9 @@ points
 function Makie.tricontourf!(
     ax::Axis,
     b::DiscreteClosedCurve,
-    positions::AbstractMatrix,
-    values::AbstractVector,
-    boundary_values::AbstractVector,
+    positions,
+    values,
+    boundary_values,
     ;
     kwargs...
 )
@@ -115,9 +116,9 @@ Contour plot some scalar function in a domain enclosed by `b`
 function Makie.contourf!(
     ax::Axis,
     b::DiscreteClosedCurve,
-    xs::AbstractVector,
-    ys::AbstractVector,
-    values::AbstractMatrix,
+    xs,
+    ys,
+    values,
     ;
     kwargs...
 )
@@ -125,5 +126,97 @@ function Makie.contourf!(
     co = Makie.contourf!(ax, xs, ys, values; kwargs...)
     return co
 end
+
+
+
+# recipes
+@recipe BoundaryCurve begin
+    color = :black
+    linewidth = 1.5
+    arrs = false
+end
+
+function Makie.plot!(
+    bc::BoundaryCurve{<:Tuple{<:DiscreteClosedCurve}}
+)
+
+    input_nodes = [:converted_1]
+    output_nodes = [:node_locs, :n_tips, :t_tips]
+
+    map!(bc.attributes, input_nodes, output_nodes) do bdry
+
+        return (
+            Point2f[eachcol(bdry.x)...],
+            Point2f[eachcol(bdry.n)...],
+            Point2f[(real(w), imag(w)) for w in bdry.cw]
+        )
+    end
+
+    # NOTE: lines slightly faster but less convenient
+    poly!(
+        bc,
+        bc.node_locs,
+        strokecolor=bc.color,
+        color=:transparent,
+        strokewidth=bc.linewidth,
+    )
+
+    if bc.arrs[]
+        arrows2d!(
+            bc,
+            bc.node_locs,
+            bc.n_tips,
+            color=:blue,
+            lengthscale=0.1,
+        )
+
+        arrows2d!(
+            bc,
+            bc.node_locs,
+            bc.t_tips,
+            color=:red,
+        )
+    end
+
+    return bc
+end
+
+function Makie.convert_arguments(::Type{<:Tricontourf}, sol::BVPSolution)
+
+    @info "convert arguments tricontourf"
+
+    # extract from col-major ordering into vector of tuples
+    points = [Tuple(p) for p in eachcol(sol.x)]
+    # make polygon from vertices of boundary
+    poly = polygon(sol.prob.boundary)
+
+    boundary_nodes, points = convert_boundary_points_to_indices(
+        [poly,],
+        ;
+        existing_points=points
+    )
+
+    tri = triangulate(points; boundary_nodes=boundary_nodes)
+
+    z = [
+        sol.u
+        data(sol.prob.bc)
+    ]
+
+    return (tri, z)
+    # co = Makie.tricontourf!(ax, tri, z; kwargs...)
+
+end
+
+function Makie.convert_arguments(::Type{<:Contourf}, sol::BVPSolution)
+    # WARN: still broken, only use tricontourf for now
+    @info "convert arguments contourf"
+
+    xs, ys = unique.(eachrow(sol.x))
+
+    return (xs, ys, reshape(sol.u, length(xs), length(ys)))
+
+end
+
 
 end
