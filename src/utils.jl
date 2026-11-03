@@ -12,8 +12,8 @@ t |--> (x, y)
 # Arguments
 - `t`: [TODO:parameter]
 """
-function starfish(t, R=1, a=0.3, w=5)
-    z = (R + a * cos.(w * t)) * cis(t) # parametrization of boundary
+function starfish(t; t0=0, R=1, a=0.3, w=5)
+    z = ((R + a * cos.(w * t)) * cis(t + t0))  # parametrization of boundary
     return SA[real(z), imag(z)] # TODO: play with static arrays
 end
 
