@@ -15,7 +15,6 @@ NearestNeighbors = "b8a86587-4115-5ab1-83bc-aa920d37bbce"
 PolygonOps = "647866c9-e3ac-4575-94e7-e3d426903924"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 RecursiveFactorization = "f2c3362d-daeb-58d1-803e-2bc74f2840b4"
-Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
 StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
 
 [weakdeps]
@@ -23,21 +22,6 @@ Makie = "ee78f7c6-11fb-53f2-987a-cfe4a2b5a57a"
 
 [extensions]
 BoundaryIntegralEquationsMakieExt = "Makie"
-
-[compat]
-BenchmarkTools = "1.8.0"
-DelaunayTriangulation = "1.6.6"
-FFTW = "1.10.0"
-JLD2 = "0.6.6"
-LaTeXStrings = "1.4.1"
-LinearAlgebra = "1.12.0"
-LinearSolve = "4.3.0"
-NearestNeighbors = "0.4.29"
-PolygonOps = "0.1.2"
-Random = "1.11.0"
-RecursiveFactorization = "0.2.26"
-Reexport = "1.2.2"
-StaticArrays = "1.9.18"
 
 [extras]
 SafeTestsets = "1bc83da4-3b8d-516f-aca4-4fe02f6d838f"
