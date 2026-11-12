@@ -6,3 +6,5 @@ using SafeTestsets
 @safetestset "Close Evaluation" include("close_evaluation.jl")
 
 @safetestset "Solve Dispatch" include("solve.jl")
+
+@safetestset "Makie" include("makie.jl")
