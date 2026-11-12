@@ -208,6 +208,10 @@ function Makie.convert_arguments(::Type{<:Tricontourf}, sol::BVPSolution)
 
 end
 
+function Makie.convert_arguments(::Type{<:Surface}, sol::BVPSolution)
+    Makie.convert_arguments(Contourf, sol)
+end
+
 function Makie.convert_arguments(::Type{<:Contourf}, sol::BVPSolution)
     # WARN: still broken, only use tricontourf for now
     @info "convert arguments contourf"
