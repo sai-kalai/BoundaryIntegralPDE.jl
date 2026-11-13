@@ -2,7 +2,7 @@
 using Test
 
 using BoundaryIntegralPDE
-using BoundaryIntegralPDE.DevTools
+using DevTools
 
 @testset "solve" begin
     n = 200

@@ -1,6 +1,6 @@
 module Fixtures
 
-using ...BoundaryIntegralPDE
+using BoundaryIntegralPDE
 # data generated with octave using seed 42
 # ns = 10;                          	% num of source points
 # s_ps.x = 1.5*exp(2i*pi*rand(ns,1));	% random source location

@@ -5,7 +5,7 @@ using LinearAlgebra
 using StaticArrays
 using JLD2
 
-using ..BoundaryIntegralPDE
+using BoundaryIntegralPDE
 
 export ConvergenceResult, SolverParameters, SolutionMetadata,
     SolutionWithMetadata, add_solutions!, SolutionGroup,
@@ -616,3 +616,4 @@ function run_all_simulations(
 end
 
 end
+

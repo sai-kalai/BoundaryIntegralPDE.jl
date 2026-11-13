@@ -1,0 +1,12 @@
+[deps]
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+BoundaryIntegralPDE = "58b2a5b9-46a1-47d2-a141-e25d04a557d9"
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+GLMakie = "e9467ef8-e4e7-5192-8a1a-b1aee30e663a"
+Makie = "ee78f7c6-11fb-53f2-987a-cfe4a2b5a57a"
+ProfileView = "c46f51b8-102a-5cf2-8d2c-8597cb0e0da7"
+Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
+
+[sources]
+BoundaryIntegralPDE = {path = ".."}

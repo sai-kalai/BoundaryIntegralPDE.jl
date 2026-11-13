@@ -1,0 +1,20 @@
+name = "DevTools"
+uuid = "0c5ce45b-d915-4aee-ad63-d466db15072e"
+version = "0.1.0"
+authors = ["simon cadavid <simon.cadavid98@gmail.com>"]
+
+[deps]
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+BoundaryIntegralPDE = "58b2a5b9-46a1-47d2-a141-e25d04a557d9"
+JLD2 = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
+
+[sources]
+BoundaryIntegralPDE = {path = ".."}
+
+[compat]
+BenchmarkTools = "1.8.0"
+JLD2 = "0.6.7"
+LinearAlgebra = "1.12.0"
+StaticArrays = "1.9.24"

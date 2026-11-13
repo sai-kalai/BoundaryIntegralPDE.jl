@@ -4,7 +4,7 @@ using Test
 using Makie
 
 using BoundaryIntegralPDE
-using BoundaryIntegralPDE.DevTools
+using DevTools
 
 
 @testset "makie recipes" begin

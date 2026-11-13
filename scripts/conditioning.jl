@@ -6,7 +6,7 @@ using Printf
 
 
 using BoundaryIntegralPDE
-using BoundaryIntegralPDE.DevTools
+using DevTools
 
 include("plot/utils.jl")
 

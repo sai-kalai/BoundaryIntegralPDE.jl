@@ -22,8 +22,8 @@ using BenchmarkTools
 using JLD2
 
 using BoundaryIntegralPDE
-using BoundaryIntegralPDE.DevTools
-using BoundaryIntegralPDE.DevTools: Fixtures
+using DevTools
+using DevTools.Fixtures
 
 # 1. run simulations
 #

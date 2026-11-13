@@ -4,28 +4,19 @@ version = "0.1.0"
 authors = ["simon cadavid <simon.cadavid98@gmail.com>"]
 
 [deps]
-BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
-DelaunayTriangulation = "927a84f5-c5f4-47a5-9785-b46e178433df"
-FFTW = "7a1cc6ca-52ef-59f5-83cd-3a7055c09341"
-JLD2 = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
-LaTeXStrings = "b964fa9f-0449-5b57-a5c2-d3ea65f4040f"
+FFTA = "b86e33f2-c0db-4aa1-a6e0-ab43e668529e"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 LinearSolve = "7ed4a6bd-45f5-4d41-b270-4a48e9bafcae"
 NearestNeighbors = "b8a86587-4115-5ab1-83bc-aa920d37bbce"
 PolygonOps = "647866c9-e3ac-4575-94e7-e3d426903924"
-Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 RecursiveFactorization = "f2c3362d-daeb-58d1-803e-2bc74f2840b4"
 StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
 
 [weakdeps]
+DelaunayTriangulation = "927a84f5-c5f4-47a5-9785-b46e178433df"
 Makie = "ee78f7c6-11fb-53f2-987a-cfe4a2b5a57a"
 
 [extensions]
-BoundaryIntegralPDEMakieExt = "Makie"
+BoundaryIntegralPDEMakieExt = ["Makie", "DelaunayTriangulation"]
 
-[extras]
-SafeTestsets = "1bc83da4-3b8d-516f-aca4-4fe02f6d838f"
-Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
-[targets]
-test = ["SafeTestsets", "Test"]

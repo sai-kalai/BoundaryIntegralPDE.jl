@@ -17,7 +17,7 @@ sampled points, including many points near the boundary
 using JLD2
 using GLMakie
 
-using BoundaryIntegralPDE, BoundaryIntegralPDE.DevTools
+using BoundaryIntegralPDE, DevTools
 
 include("utils.jl")
 

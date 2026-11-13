@@ -7,7 +7,8 @@ using StaticArrays
 using BenchmarkTools
 
 using BoundaryIntegralPDE
-using BoundaryIntegralPDE.DevTools
+using DevTools
+using DevTools.Fixtures
 
 # define dense cartesian background grid
 @show ARGS

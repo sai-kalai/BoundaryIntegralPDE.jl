@@ -6,7 +6,7 @@ module BoundaryIntegralPDE
 #
 using LinearAlgebra
 using StaticArrays
-using FFTW
+using FFTA
 using PolygonOps
 using NearestNeighbors
 using LinearSolve
@@ -178,8 +178,6 @@ function boundarycurve end
 function boundarycurve! end
 
 
-# development tools module
-include("DevTools/DevTools.jl")
 
 
 

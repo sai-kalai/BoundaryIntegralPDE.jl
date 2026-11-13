@@ -8,7 +8,7 @@ using ProfileView
 using GLMakie
 
 using BoundaryIntegralPDE
-using BoundaryIntegralPDE.DevTools
+using DevTools
 
 n_domain = 200
 n_bdry = 400

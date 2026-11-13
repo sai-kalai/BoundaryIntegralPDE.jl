@@ -16,7 +16,8 @@ using GLMakie
 using LaTeXStrings
 using Statistics
 
-using BoundaryIntegralPDE, BoundaryIntegralPDE.DevTools
+using BoundaryIntegralPDE
+using DevTools
 
 include("utils.jl")
 

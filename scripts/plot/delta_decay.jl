@@ -18,7 +18,7 @@ using NearestNeighbors
 using Printf
 
 using BoundaryIntegralPDE
-using BoundaryIntegralPDE.DevTools
+using DevTools
 
 
 include("utils.jl")

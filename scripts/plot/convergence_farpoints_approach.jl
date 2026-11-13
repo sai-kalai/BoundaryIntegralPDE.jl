@@ -16,7 +16,7 @@ run from root directory of the project
 using JLD2
 using Makie
 
-using BoundaryIntegralPDE, BoundaryIntegralPDE.DevTools
+using BoundaryIntegralPDE, DevTools
 
 include("utils.jl")
 

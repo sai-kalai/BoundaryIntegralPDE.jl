@@ -4,8 +4,8 @@ using Makie
 using LinearAlgebra
 
 using BoundaryIntegralPDE
-using BoundaryIntegralPDE.DevTools
 using BoundaryIntegralPDE: order
+using DevTools
 
 
 using GLMakie
